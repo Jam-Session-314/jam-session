@@ -1,0 +1,52 @@
+.signin-page {
+    background: url('/path-to-your-leafy-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  .login-box {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    color: white;
+    width: 400px;
+  }
+  
+  .login-box h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-control {
+    background: #fff;
+    border: none;
+    padding: 0.75rem;
+  }
+  
+  .btn-primary {
+    background-color: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ddd;
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    font-weight: bold;
+  }
+  
+  .btn-secondary:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .form-label {
+    color: white;
+  }
+  
