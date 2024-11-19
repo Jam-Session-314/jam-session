@@ -20,6 +20,11 @@ async function main() {
         email: account.email,
         password,
         role,
+        firstName: account.firstName,
+        lastName: account.lastName,
+        instruments: account.instruments,
+        bio: account.bio,
+        genre: account.genre,
       },
     });
     // console.log(`  Created user: ${user.email} with role: ${user.role}`);
