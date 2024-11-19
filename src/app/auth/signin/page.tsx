@@ -1,7 +1,8 @@
 'use client';
 
 import { signIn } from 'next-auth/react';
-import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
+import { Button, Container, Form } from 'react-bootstrap';
+import './signin.css'; // Link to your CSS file
 
 /** The sign in page. */
 const SignIn = () => {
@@ -25,34 +26,37 @@ const SignIn = () => {
   };
 
   return (
-    <main>
-      <Container>
-        <Row className="justify-content-center">
-          <Col xs={5}>
-            <h1 className="text-center">Sign In</h1>
-            <Card>
-              <Card.Body>
-                <Form method="post" onSubmit={handleSubmit}>
-                  <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Email</Form.Label>
-                    <input name="email" type="text" className="form-control" />
-                  </Form.Group>
-                  <Form.Group>
-                    <Form.Label>Password</Form.Label>
-                    <input name="password" type="password" className="form-control" />
-                  </Form.Group>
-                  <Button type="submit" className="mt-3">
-                    Signin
-                  </Button>
-                </Form>
-              </Card.Body>
-              <Card.Footer>
-                Don&apos;t have an account?
-                <a href="/auth/signup">Sign up</a>
-              </Card.Footer>
-            </Card>
-          </Col>
-        </Row>
+    <main className="signin-page">
+      <Container className="d-flex justify-content-center align-items-center vh-100">
+        <div className="login-box">
+          <h2>LOG IN TO YOUR ACCOUNT</h2>
+          <Form method="post" onSubmit={handleSubmit}>
+            <Form.Group controlId="formBasicEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control
+                name="email"
+                type="text"
+                className="form-control"
+              />
+            </Form.Group>
+            <Form.Group controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                name="password"
+                type="password"
+                className="form-control"
+              />
+            </Form.Group>
+            <div className="d-flex justify-content-between mt-3">
+              <Button type="submit" className="btn btn-primary">
+                LOG-IN
+              </Button>
+              <Button href="/auth/signup" variant="secondary">
+                REGISTER
+              </Button>
+            </div>
+          </Form>
+        </div>
       </Container>
     </main>
   );
