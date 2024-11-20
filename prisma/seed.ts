@@ -7,6 +7,7 @@ const prisma = new PrismaClient();
 async function main() {
   console.log('Seeding the database');
   const password = await hash('changeme', 10);
+
   config.defaultAccounts.forEach(async (account) => {
     let role: Role = 'USER';
     if (account.role === 'ADMIN') {
@@ -20,15 +21,16 @@ async function main() {
         email: account.email,
         password,
         role,
-        firstName: account.firstName,
-        lastName: account.lastName,
-        instruments: account.instruments,
-        bio: account.bio,
-        genre: account.genre,
+        firstName: account.firstName || 'DefaultFirstName',
+        lastName: account.lastName || 'DefaultLastName',
+        instruments: account.instruments || 'None',
+        bio: account.bio || 'Default bio here...',
+        genre: account.genre || 'None',
       },
     });
     // console.log(`  Created user: ${user.email} with role: ${user.role}`);
   });
+
   config.defaultData.forEach(async (data, index) => {
     let condition: Condition = 'good';
     if (data.condition === 'poor') {
@@ -51,6 +53,7 @@ async function main() {
     });
   });
 }
+
 main()
   .then(() => prisma.$disconnect())
   .catch(async (e) => {

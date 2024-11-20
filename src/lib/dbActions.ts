@@ -92,3 +92,23 @@ export async function changePassword(credentials: { email: string; password: str
     },
   });
 }
+
+export async function editUser(data: {
+  id: number;
+  firstName: string | null;
+  lastName: string | null;
+  instruments: string | null;
+  bio: string | null;
+  genre: string | null;
+}) {
+  await prisma.user.update({
+    where: { id: data.id },
+    data: {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      instruments: data.instruments,
+      bio: data.bio,
+      genre: data.genre,
+    },
+  });
+}
