@@ -34,6 +34,15 @@ model User {
   role        Role    @default(USER)
 }
 
+model Session {
+  id                Int      @id @default(autoincrement())
+  location          String
+  time              DateTime
+  musicalType       String
+  desiredCapabilities String
+  organizerContact  String
+}
+
 enum Condition {
   excellent
   good

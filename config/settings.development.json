@@ -21,7 +21,6 @@
       "genre": "Rock"
     }
   ],
-
   "defaultData": [
     {
       "name": "Basket",
@@ -46,6 +45,22 @@
       "quantity": 2,
       "owner": "admin@foo.com",
       "condition": "excellent"
+    }
+  ],
+  "defaultSessions": [
+    {
+      "location": "123 Main Street, Music City",
+      "time": "2023-12-01T19:00:00Z",
+      "musicalType": "Jazz",
+      "desiredCapabilities": "Experienced saxophonist, drummer, and bassist",
+      "organizerContact": "organizer@example.com"
+    },
+    {
+      "location": "456 Melody Lane, Harmony Town",
+      "time": "2023-12-10T15:00:00Z",
+      "musicalType": "Rock",
+      "desiredCapabilities": "Lead guitarist and vocalist",
+      "organizerContact": "rockfan@example.com"
     }
   ]
 }
