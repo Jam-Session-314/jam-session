@@ -8,6 +8,7 @@ async function main() {
   console.log('Seeding the database');
   const password = await hash('changeme', 10);
 
+  // Seed default accounts
   config.defaultAccounts.forEach(async (account) => {
     let role: Role = 'USER';
     if (account.role === 'ADMIN') {
@@ -28,9 +29,9 @@ async function main() {
         genre: account.genre || 'None',
       },
     });
-    // console.log(`  Created user: ${user.email} with role: ${user.role}`);
   });
 
+  // Seed default stuff
   config.defaultData.forEach(async (data, index) => {
     let condition: Condition = 'good';
     if (data.condition === 'poor') {
@@ -49,6 +50,22 @@ async function main() {
         quantity: data.quantity,
         owner: data.owner,
         condition,
+      },
+    });
+  });
+
+  // Seed default sessions
+  config.defaultSessions.forEach(async (session, index) => {
+    console.log(`  Adding session at location: ${session.location}`);
+    await prisma.session.upsert({
+      where: { id: index + 1 }, // Adjust to ensure proper uniqueness
+      update: {},
+      create: {
+        location: session.location,
+        time: new Date(session.time),
+        musicalType: session.musicalType,
+        desiredCapabilities: session.desiredCapabilities,
+        organizerContact: session.organizerContact,
       },
     });
   });
