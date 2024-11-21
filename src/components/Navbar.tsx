@@ -22,11 +22,8 @@ const NavBar: React.FC = () => {
           <Nav className="me-auto justify-content-start">
             {currentUser
               ? [
-                  <Nav.Link id="add-stuff-nav" href="/add" key="add" active={pathName === '/add'}>
-                    SESSIONS
-                  </Nav.Link>,
-                  <Nav.Link id="list-stuff-nav" href="/list" key="list" active={pathName === '/list'}>
-                    EXPLORE PROFILES
+                  <Nav.Link id="sessions-nav" href="/sessions" key="sessions" active={pathName === '/sessions'}>
+                    View Sessions
                   </Nav.Link>,
                 ]
               : ''}
