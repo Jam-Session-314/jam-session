@@ -26,11 +26,11 @@ model User {
   id          Int     @id @default(autoincrement())
   email       String  @unique
   password    String
-  firstName   String
-  lastName    String
-  instruments String
-  bio         String
-  genre       String
+  firstName   String?
+  lastName    String?
+  instruments String?
+  bio         String?
+  genre       String?
   role        Role    @default(USER)
 }
 
