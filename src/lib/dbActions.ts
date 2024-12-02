@@ -1,6 +1,6 @@
 'use server';
 
-import { Stuff, Condition } from '@prisma/client';
+import { Stuff, Condition, Session } from '@prisma/client';
 import { hash } from 'bcrypt';
 import { redirect } from 'next/navigation';
 import { prisma } from './prisma';
@@ -49,6 +49,34 @@ export async function addSession(session:
     },
   });
   redirect('/sessions');
+}
+
+export async function deleteSession(id: number) {
+  await prisma.session.delete({
+    where: { id },
+  });
+  redirect('/my-sessions');
+}
+
+/**
+ * Edits an existing stuff in the database.
+ * @param stuff, an object with the following properties: id, name, quantity, owner, condition.
+ */
+export async function editSession(session: Session) {
+  // console.log(`editStuff data: ${JSON.stringify(stuff, null, 2)}`);
+  await prisma.session.update({
+    where: { id: session.id },
+    data: {
+      location: session.location,
+      time: session.time,
+      musicalType: session.musicalType,
+      desiredCapabilities: session.desiredCapabilities,
+      organizerContact: session.organizerContact,
+      owner: session.owner,
+    },
+  });
+  // After updating, redirect to the list page
+  redirect('/my-sessions');
 }
 
 /**
