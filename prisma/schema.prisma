@@ -41,6 +41,7 @@ model Session {
   musicalType       String
   desiredCapabilities String
   organizerContact  String
+  owner             String
 }
 
 enum Condition {

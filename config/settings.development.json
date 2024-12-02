@@ -53,14 +53,16 @@
       "time": "2023-12-01T19:00:00Z",
       "musicalType": "Jazz",
       "desiredCapabilities": "Experienced saxophonist, drummer, and bassist",
-      "organizerContact": "organizer@example.com"
+      "organizerContact": "organizer@example.com",
+      "owner": "john@foo.com"
     },
     {
       "location": "456 Melody Lane, Harmony Town",
       "time": "2023-12-10T15:00:00Z",
       "musicalType": "Rock",
       "desiredCapabilities": "Lead guitarist and vocalist",
-      "organizerContact": "rockfan@example.com"
+      "organizerContact": "rockfan@example.com",
+      "owner": "john@foo.com"
     }
   ]
 }
