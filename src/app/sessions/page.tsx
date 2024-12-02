@@ -15,6 +15,7 @@ interface SessionType {
   musicalType: string;
   desiredCapabilities: string;
   organizerContact: string;
+  owner: string;
 }
 
 const SessionsPage = async () => {
@@ -34,6 +35,7 @@ const SessionsPage = async () => {
       musicalType: true,
       desiredCapabilities: true,
       organizerContact: true,
+      owner: true,
     },
   })).map((session) => ({
     ...session,

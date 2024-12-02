@@ -12,6 +12,7 @@ interface SessionProps {
     musicalType: string;
     desiredCapabilities: string;
     organizerContact: string;
+    owner: string;
   };
 }
 

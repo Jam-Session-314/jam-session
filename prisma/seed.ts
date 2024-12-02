@@ -66,6 +66,7 @@ async function main() {
         musicalType: session.musicalType,
         desiredCapabilities: session.desiredCapabilities,
         organizerContact: session.organizerContact,
+        owner: session.owner,
       },
     });
   });

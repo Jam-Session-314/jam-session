@@ -25,6 +25,14 @@ const NavBar: React.FC = () => {
                   <Nav.Link id="sessions-nav" href="/sessions" key="sessions" active={pathName === '/sessions'}>
                     View Sessions
                   </Nav.Link>,
+                  <Nav.Link
+                    id="sessions-nav"
+                    href="/add-session"
+                    key="add-session"
+                    active={pathName === '/add-session'}
+                  >
+                    Add Session
+                  </Nav.Link>,
                 ]
               : ''}
             {currentUser && role === 'ADMIN' ? (

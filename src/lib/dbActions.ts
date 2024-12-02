@@ -31,6 +31,26 @@ export async function addStuff(stuff: { name: string; quantity: number; owner: s
   redirect('/list');
 }
 
+export async function addSession(session:
+{ location: string;
+  time: Date;
+  musicalType: string;
+  desiredCapabilities: string;
+  organizerContact: string;
+  owner: string }) {
+  await prisma.session.create({
+    data: {
+      location: session.location,
+      time: session.time,
+      musicalType: session.musicalType,
+      desiredCapabilities: session.desiredCapabilities,
+      organizerContact: session.organizerContact,
+      owner: session.owner,
+    },
+  });
+  redirect('/sessions');
+}
+
 /**
  * Edits an existing stuff in the database.
  * @param stuff, an object with the following properties: id, name, quantity, owner, condition.

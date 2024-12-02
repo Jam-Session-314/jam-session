@@ -7,6 +7,15 @@ export const AddStuffSchema = Yup.object({
   owner: Yup.string().required(),
 });
 
+export const AddSessionSchema = Yup.object({
+  location: Yup.string().required(),
+  time: Yup.date().required(),
+  musicalType: Yup.string().required(),
+  desiredCapabilities: Yup.string().required(),
+  organizerContact: Yup.string().required(),
+  owner: Yup.string().required(),
+});
+
 export const EditStuffSchema = Yup.object({
   id: Yup.number().required(),
   name: Yup.string().required(),
