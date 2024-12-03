@@ -19,3 +19,9 @@ body {
   /* Alternatively, you can use a solid color */
   /* background-color: #f0f0f0; */
 }
+
+.header-box {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  display: inline-block; /* Shrinks the box to fit the text */
+  text-align: center; /* Centers the text inside */
+}
