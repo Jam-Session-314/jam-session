@@ -1,4 +1,4 @@
-name: ci-nextjs-application-template
+name: jam-session-react
 on:
   push:
     branches: [main, master]
