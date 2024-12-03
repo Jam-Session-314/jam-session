@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-shadow */
+import './styles.css';
 import { getServerSession } from 'next-auth';
 import { Col, Container, Row } from 'react-bootstrap';
 import { loggedInProtectedPage } from '@/lib/page-protection';
@@ -47,7 +48,9 @@ const SessionsPage = async () => {
       <Container id="sessions" fluid className="py-3">
         <Row>
           <Col className="text-center">
-            <h1>Current Jam Sessions</h1>
+            <div className="p-2 rounded header-box mb-3">
+              <h1 className="text-white">Current Jam Sessions</h1>
+            </div>
           </Col>
         </Row>
         <Row xs={1} md={2} lg={3} className="g-4">
