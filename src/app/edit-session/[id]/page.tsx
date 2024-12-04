@@ -4,6 +4,7 @@ import { Session } from '@prisma/client';
 import authOptions from '@/lib/authOptions';
 import { loggedInProtectedPage } from '@/lib/page-protection';
 import { prisma } from '@/lib/prisma';
+import { Col, Container, Row } from 'react-bootstrap';
 import EditSessionForm from '@/components/EditSessionForm';
 
 export default async function EditSessionPage({ params }: { params: { id: string | string[] } }) {
@@ -27,7 +28,17 @@ export default async function EditSessionPage({ params }: { params: { id: string
 
   return (
     <main>
-      <EditSessionForm session={jamSession} />
+      <Container className="py-3">
+        <Row>
+          <Col className="text-center">
+            <div className="p-2 rounded header-box mb-4">
+              <h2 className="text-white">Edit Jam Session</h2>
+            </div>
+          </Col>
+        </Row>
+        <EditSessionForm session={jamSession} />
+      </Container>
     </main>
+
   );
 }
