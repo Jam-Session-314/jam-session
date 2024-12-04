@@ -2,7 +2,7 @@
 
 import { signOut } from 'next-auth/react';
 import { Button, Col, Row, Container } from 'react-bootstrap';
-import './SignOut.css';
+import './signout.css';
 
 const SignOut = () => (
   <div className="signout-container">
