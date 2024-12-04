@@ -49,7 +49,9 @@ const SessionsPage = async () => {
       <Container id="sessions" fluid className="py-3">
         <Row>
           <Col className="text-center">
-            <h1 className="text-white">Your Jam Sessions</h1>
+            <div className="p-2 rounded header-box mb-3">
+              <h1 className="text-white">Your Jam Sessions</h1>
+            </div>
           </Col>
         </Row>
         <Row xs={1} md={2} lg={3} className="g-4">
