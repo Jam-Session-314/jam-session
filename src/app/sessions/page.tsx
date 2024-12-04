@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-shadow */
-import './styles.css';
 import { getServerSession } from 'next-auth';
 import { Col, Container, Row } from 'react-bootstrap';
 import { loggedInProtectedPage } from '@/lib/page-protection';
