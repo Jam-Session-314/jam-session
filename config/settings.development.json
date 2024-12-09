@@ -8,7 +8,8 @@
       "lastName": "User",
       "instruments": "Piano, Guitar",
       "bio": "I am the administrator responsible for overseeing the platform.",
-      "genre": "Classical"
+      "genre": "Classical",
+      "image": "https://images.unsplash.com/photo-1664575600796-ffa828c5cb6e"
     },
     {
       "email": "john@foo.com",
@@ -18,7 +19,8 @@
       "lastName": "Doe",
       "instruments": "Guitar, Drums",
       "bio": "Music enthusiast and performer.",
-      "genre": "Rock"
+      "genre": "Rock",
+      "image": "https://images.unsplash.com/photo-1651613543604-195861551d15"
     }
   ],
   "defaultData": [

@@ -31,6 +31,7 @@ model User {
   instruments String?
   bio         String?
   genre       String?
+  image       String?
   role        Role    @default(USER)
 }
 

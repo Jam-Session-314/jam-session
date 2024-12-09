@@ -27,6 +27,7 @@ async function main() {
         instruments: account.instruments || 'None',
         bio: account.bio || 'Default bio here...',
         genre: account.genre || 'None',
+        image: account.image || 'https://images.unsplash.com/photo-1565258544346-eb818531643f',
       },
     });
   });
