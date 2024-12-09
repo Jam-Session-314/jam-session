@@ -49,403 +49,403 @@
   ],
   "defaultSessions": [
     {
-      "location": "202 Tempo Terrace, Melody Metropolis",
-      "time": "2023-12-04T21:00:00Z",
-      "musicalType": "Reggae",
-      "desiredCapabilities": "Drummer and percussionist",
-      "organizerContact": "classicalbuff@example.com",
+      "location": "Waikiki Beach, Honolulu",
+      "time": "2023-12-21T04:00:00Z",
+      "musicalType": "Hawaiian",
+      "desiredCapabilities": "Experienced ukulele player and slack-key guitarist",
+      "organizerContact": "organizer0@example.com",
       "owner": "john@foo.com"
     },
     {
-      "location": "789 Rhythm Road, Beat City",
-      "time": "2023-12-04T13:00:00Z",
-      "musicalType": "Hip Hop",
-      "desiredCapabilities": "Experienced violinist and cellist",
-      "organizerContact": "jazzlover@example.com",
+      "location": "Ala Moana Center, Honolulu",
+      "time": "2023-12-05T18:00:00Z",
+      "musicalType": "Slack-key Guitar",
+      "desiredCapabilities": "Hula dancers and Polynesian drummers",
+      "organizerContact": "organizer1@example.com",
       "owner": "admin@foo.com"
     },
     {
-      "location": "456 Melody Lane, Harmony Town",
-      "time": "2023-12-08T19:00:00Z",
-      "musicalType": "Rock",
-      "desiredCapabilities": "Drummer and percussionist",
-      "organizerContact": "jazzlover@example.com",
+      "location": "Downtown Honolulu",
+      "time": "2023-12-11T07:00:00Z",
+      "musicalType": "Ukulele",
+      "desiredCapabilities": "Reggae vocalist and rhythm guitarist",
+      "organizerContact": "organizer2@example.com",
       "owner": "john@foo.com"
     },
     {
-      "location": "101 Chord Court, Symphony Ville",
-      "time": "2023-12-21T18:00:00Z",
-      "musicalType": "Folk",
-      "desiredCapabilities": "DJ with turntables",
-      "organizerContact": "rockfan@example.com",
-      "owner": "admin@foo.com"
-    },
-    {
-      "location": "123 Main Street, Music City",
-      "time": "2023-12-09T09:00:00Z",
-      "musicalType": "Hip Hop",
-      "desiredCapabilities": "Composer and lyricist",
-      "organizerContact": "dj@example.com",
-      "owner": "john@foo.com"
-    },
-    {
-      "location": "202 Tempo Terrace, Melody Metropolis",
-      "time": "2024-01-01T14:00:00Z",
-      "musicalType": "Pop",
-      "desiredCapabilities": "Keyboardist and backup vocalist",
-      "organizerContact": "classicalbuff@example.com",
-      "owner": "admin@foo.com"
-    },
-    {
-      "location": "789 Rhythm Road, Beat City",
-      "time": "2023-12-19T10:00:00Z",
-      "musicalType": "Folk",
-      "desiredCapabilities": "Lead guitarist and vocalist",
-      "organizerContact": "organizer@example.com",
-      "owner": "john@foo.com"
-    },
-    {
-      "location": "456 Melody Lane, Harmony Town",
-      "time": "2023-12-18T00:00:00Z",
-      "musicalType": "Rock",
-      "desiredCapabilities": "Lead guitarist and vocalist",
-      "organizerContact": "dj@example.com",
-      "owner": "admin@foo.com"
-    },
-    {
-      "location": "101 Chord Court, Symphony Ville",
-      "time": "2023-12-28T08:00:00Z",
-      "musicalType": "Electronic",
-      "desiredCapabilities": "Drummer and percussionist",
-      "organizerContact": "rockfan@example.com",
-      "owner": "john@foo.com"
-    },
-    {
-      "location": "123 Main Street, Music City",
-      "time": "2023-12-04T07:00:00Z",
-      "musicalType": "Electronic",
-      "desiredCapabilities": "Keyboardist and backup vocalist",
-      "organizerContact": "rockfan@example.com",
-      "owner": "admin@foo.com"
-    },
-    {
-      "location": "202 Tempo Terrace, Melody Metropolis",
-      "time": "2023-12-01T20:00:00Z",
-      "musicalType": "Rock",
-      "desiredCapabilities": "DJ with turntables",
-      "organizerContact": "classicalbuff@example.com",
-      "owner": "john@foo.com"
-    },
-    {
-      "location": "789 Rhythm Road, Beat City",
-      "time": "2023-12-24T04:00:00Z",
-      "musicalType": "Classical",
-      "desiredCapabilities": "Drummer and percussionist",
-      "organizerContact": "jazzlover@example.com",
-      "owner": "admin@foo.com"
-    },
-    {
-      "location": "456 Melody Lane, Harmony Town",
-      "time": "2023-12-17T19:00:00Z",
-      "musicalType": "Hip Hop",
-      "desiredCapabilities": "Acoustic guitarist and harmonica player",
-      "organizerContact": "rockfan@example.com",
-      "owner": "john@foo.com"
-    },
-    {
-      "location": "101 Chord Court, Symphony Ville",
-      "time": "2023-12-26T21:00:00Z",
-      "musicalType": "Classical",
-      "desiredCapabilities": "Experienced violinist and cellist",
-      "organizerContact": "dj@example.com",
-      "owner": "admin@foo.com"
-    },
-    {
-      "location": "123 Main Street, Music City",
-      "time": "2023-12-19T22:00:00Z",
-      "musicalType": "Pop",
-      "desiredCapabilities": "Drummer and percussionist",
-      "organizerContact": "organizer@example.com",
-      "owner": "john@foo.com"
-    },
-    {
-      "location": "202 Tempo Terrace, Melody Metropolis",
-      "time": "2023-12-27T21:00:00Z",
+      "location": "Kaka'ako Park, Honolulu",
+      "time": "2023-12-07T06:00:00Z",
       "musicalType": "Jazz",
-      "desiredCapabilities": "Drummer and percussionist",
-      "organizerContact": "rockfan@example.com",
+      "desiredCapabilities": "Jazz saxophonist and drummer",
+      "organizerContact": "organizer3@example.com",
       "owner": "admin@foo.com"
     },
     {
-      "location": "789 Rhythm Road, Beat City",
-      "time": "2023-12-29T18:00:00Z",
-      "musicalType": "Reggae",
-      "desiredCapabilities": "DJ with turntables",
-      "organizerContact": "classicalbuff@example.com",
+      "location": "University of Hawaii, Manoa",
+      "time": "2023-12-30T17:00:00Z",
+      "musicalType": "Blues",
+      "desiredCapabilities": "Classical guitarist and vocalist",
+      "organizerContact": "organizer4@example.com",
       "owner": "john@foo.com"
     },
     {
-      "location": "456 Melody Lane, Harmony Town",
-      "time": "2023-12-07T04:00:00Z",
-      "musicalType": "Folk",
-      "desiredCapabilities": "Experienced violinist and cellist",
-      "organizerContact": "organizer@example.com",
+      "location": "Hanauma Bay, Honolulu",
+      "time": "2023-12-16T00:00:00Z",
+      "musicalType": "Reggae",
+      "desiredCapabilities": "Traditional Hawaiian vocalist and percussionist",
+      "organizerContact": "organizer5@example.com",
       "owner": "admin@foo.com"
     },
     {
-      "location": "101 Chord Court, Symphony Ville",
+      "location": "Chinatown, Honolulu",
+      "time": "2023-12-20T06:00:00Z",
+      "musicalType": "Traditional Polynesian",
+      "desiredCapabilities": "Hip hop DJ and beat producer",
+      "organizerContact": "organizer6@example.com",
+      "owner": "john@foo.com"
+    },
+    {
+      "location": "Pearl Harbor, Honolulu",
+      "time": "2023-12-22T08:00:00Z",
+      "musicalType": "Rock",
+      "desiredCapabilities": "Keyboardist with reggae experience",
+      "organizerContact": "organizer7@example.com",
+      "owner": "admin@foo.com"
+    },
+    {
+      "location": "Diamond Head Amphitheater, Honolulu",
+      "time": "2023-12-31T14:00:00Z",
+      "musicalType": "Hip Hop",
+      "desiredCapabilities": "Bassist with Polynesian background",
+      "organizerContact": "organizer8@example.com",
+      "owner": "john@foo.com"
+    },
+    {
+      "location": "Ko Olina Beach, Oahu",
+      "time": "2023-12-12T10:00:00Z",
+      "musicalType": "Hawaiian",
+      "desiredCapabilities": "Experienced ukulele player and slack-key guitarist",
+      "organizerContact": "organizer9@example.com",
+      "owner": "admin@foo.com"
+    },
+    {
+      "location": "Waikiki Beach, Honolulu",
+      "time": "2023-12-26T18:00:00Z",
+      "musicalType": "Slack-key Guitar",
+      "desiredCapabilities": "Hula dancers and Polynesian drummers",
+      "organizerContact": "organizer10@example.com",
+      "owner": "john@foo.com"
+    },
+    {
+      "location": "Ala Moana Center, Honolulu",
+      "time": "2023-12-29T10:00:00Z",
+      "musicalType": "Ukulele",
+      "desiredCapabilities": "Reggae vocalist and rhythm guitarist",
+      "organizerContact": "organizer11@example.com",
+      "owner": "admin@foo.com"
+    },
+    {
+      "location": "Downtown Honolulu",
+      "time": "2023-12-07T16:00:00Z",
+      "musicalType": "Jazz",
+      "desiredCapabilities": "Jazz saxophonist and drummer",
+      "organizerContact": "organizer12@example.com",
+      "owner": "john@foo.com"
+    },
+    {
+      "location": "Kaka'ako Park, Honolulu",
       "time": "2023-12-08T09:00:00Z",
-      "musicalType": "Hip Hop",
-      "desiredCapabilities": "Acoustic guitarist and harmonica player",
-      "organizerContact": "dj@example.com",
-      "owner": "john@foo.com"
-    },
-    {
-      "location": "123 Main Street, Music City",
-      "time": "2023-12-04T17:00:00Z",
-      "musicalType": "Folk",
-      "desiredCapabilities": "Acoustic guitarist and harmonica player",
-      "organizerContact": "organizer@example.com",
+      "musicalType": "Blues",
+      "desiredCapabilities": "Classical guitarist and vocalist",
+      "organizerContact": "organizer13@example.com",
       "owner": "admin@foo.com"
     },
     {
-      "location": "202 Tempo Terrace, Melody Metropolis",
-      "time": "2023-12-19T15:00:00Z",
+      "location": "University of Hawaii, Manoa",
+      "time": "2023-12-14T13:00:00Z",
       "musicalType": "Reggae",
-      "desiredCapabilities": "Composer and lyricist",
-      "organizerContact": "dj@example.com",
+      "desiredCapabilities": "Traditional Hawaiian vocalist and percussionist",
+      "organizerContact": "organizer14@example.com",
       "owner": "john@foo.com"
     },
     {
-      "location": "789 Rhythm Road, Beat City",
-      "time": "2024-01-01T06:00:00Z",
-      "musicalType": "Hip Hop",
-      "desiredCapabilities": "Acoustic guitarist and harmonica player",
-      "organizerContact": "organizer@example.com",
+      "location": "Hanauma Bay, Honolulu",
+      "time": "2023-12-31T19:00:00Z",
+      "musicalType": "Traditional Polynesian",
+      "desiredCapabilities": "Hip hop DJ and beat producer",
+      "organizerContact": "organizer15@example.com",
       "owner": "admin@foo.com"
     },
     {
-      "location": "456 Melody Lane, Harmony Town",
-      "time": "2023-12-22T12:00:00Z",
-      "musicalType": "Folk",
-      "desiredCapabilities": "Trumpet player and jazz pianist",
-      "organizerContact": "rockfan@example.com",
+      "location": "Chinatown, Honolulu",
+      "time": "2023-12-04T08:00:00Z",
+      "musicalType": "Rock",
+      "desiredCapabilities": "Keyboardist with reggae experience",
+      "organizerContact": "organizer16@example.com",
       "owner": "john@foo.com"
     },
     {
-      "location": "101 Chord Court, Symphony Ville",
-      "time": "2023-12-02T04:00:00Z",
-      "musicalType": "Electronic",
-      "desiredCapabilities": "Trumpet player and jazz pianist",
-      "organizerContact": "jazzlover@example.com",
+      "location": "Pearl Harbor, Honolulu",
+      "time": "2023-12-17T23:00:00Z",
+      "musicalType": "Hip Hop",
+      "desiredCapabilities": "Bassist with Polynesian background",
+      "organizerContact": "organizer17@example.com",
       "owner": "admin@foo.com"
     },
     {
-      "location": "123 Main Street, Music City",
-      "time": "2023-12-04T06:00:00Z",
-      "musicalType": "Folk",
-      "desiredCapabilities": "Experienced saxophonist, drummer, and bassist",
-      "organizerContact": "dj@example.com",
+      "location": "Diamond Head Amphitheater, Honolulu",
+      "time": "2023-12-05T19:00:00Z",
+      "musicalType": "Hawaiian",
+      "desiredCapabilities": "Experienced ukulele player and slack-key guitarist",
+      "organizerContact": "organizer18@example.com",
       "owner": "john@foo.com"
     },
     {
-      "location": "202 Tempo Terrace, Melody Metropolis",
-      "time": "2023-12-17T00:00:00Z",
-      "musicalType": "Hip Hop",
-      "desiredCapabilities": "Trumpet player and jazz pianist",
-      "organizerContact": "classicalbuff@example.com",
+      "location": "Ko Olina Beach, Oahu",
+      "time": "2023-12-14T22:00:00Z",
+      "musicalType": "Slack-key Guitar",
+      "desiredCapabilities": "Hula dancers and Polynesian drummers",
+      "organizerContact": "organizer19@example.com",
       "owner": "admin@foo.com"
     },
     {
-      "location": "789 Rhythm Road, Beat City",
-      "time": "2023-12-08T18:00:00Z",
-      "musicalType": "Electronic",
-      "desiredCapabilities": "Experienced violinist and cellist",
-      "organizerContact": "jazzlover@example.com",
+      "location": "Waikiki Beach, Honolulu",
+      "time": "2023-12-26T18:00:00Z",
+      "musicalType": "Ukulele",
+      "desiredCapabilities": "Reggae vocalist and rhythm guitarist",
+      "organizerContact": "organizer20@example.com",
       "owner": "john@foo.com"
     },
     {
-      "location": "456 Melody Lane, Harmony Town",
-      "time": "2023-12-20T08:00:00Z",
-      "musicalType": "Hip Hop",
-      "desiredCapabilities": "Drummer and percussionist",
-      "organizerContact": "organizer@example.com",
+      "location": "Ala Moana Center, Honolulu",
+      "time": "2023-12-18T01:00:00Z",
+      "musicalType": "Jazz",
+      "desiredCapabilities": "Jazz saxophonist and drummer",
+      "organizerContact": "organizer21@example.com",
       "owner": "admin@foo.com"
     },
     {
-      "location": "101 Chord Court, Symphony Ville",
-      "time": "2023-12-26T09:00:00Z",
-      "musicalType": "Electronic",
-      "desiredCapabilities": "DJ with turntables",
-      "organizerContact": "classicalbuff@example.com",
-      "owner": "john@foo.com"
-    },
-    {
-      "location": "123 Main Street, Music City",
-      "time": "2023-12-22T16:00:00Z",
-      "musicalType": "Hip Hop",
-      "desiredCapabilities": "Acoustic guitarist and harmonica player",
-      "organizerContact": "dj@example.com",
-      "owner": "admin@foo.com"
-    },
-    {
-      "location": "202 Tempo Terrace, Melody Metropolis",
-      "time": "2023-12-05T01:00:00Z",
-      "musicalType": "Hip Hop",
-      "desiredCapabilities": "DJ with turntables",
-      "organizerContact": "classicalbuff@example.com",
-      "owner": "john@foo.com"
-    },
-    {
-      "location": "789 Rhythm Road, Beat City",
-      "time": "2023-12-18T20:00:00Z",
-      "musicalType": "Reggae",
-      "desiredCapabilities": "Lead guitarist and vocalist",
-      "organizerContact": "dj@example.com",
-      "owner": "admin@foo.com"
-    },
-    {
-      "location": "456 Melody Lane, Harmony Town",
-      "time": "2023-12-21T18:00:00Z",
-      "musicalType": "Hip Hop",
-      "desiredCapabilities": "Acoustic guitarist and harmonica player",
-      "organizerContact": "dj@example.com",
-      "owner": "john@foo.com"
-    },
-    {
-      "location": "101 Chord Court, Symphony Ville",
+      "location": "Downtown Honolulu",
       "time": "2023-12-24T17:00:00Z",
       "musicalType": "Blues",
-      "desiredCapabilities": "Acoustic guitarist and harmonica player",
-      "organizerContact": "jazzlover@example.com",
-      "owner": "admin@foo.com"
-    },
-    {
-      "location": "123 Main Street, Music City",
-      "time": "2023-12-02T10:00:00Z",
-      "musicalType": "Folk",
-      "desiredCapabilities": "Experienced violinist and cellist",
-      "organizerContact": "organizer@example.com",
+      "desiredCapabilities": "Classical guitarist and vocalist",
+      "organizerContact": "organizer22@example.com",
       "owner": "john@foo.com"
     },
     {
-      "location": "202 Tempo Terrace, Melody Metropolis",
-      "time": "2023-12-21T02:00:00Z",
-      "musicalType": "Jazz",
-      "desiredCapabilities": "Trumpet player and jazz pianist",
-      "organizerContact": "rockfan@example.com",
+      "location": "Kaka'ako Park, Honolulu",
+      "time": "2023-12-28T08:00:00Z",
+      "musicalType": "Reggae",
+      "desiredCapabilities": "Traditional Hawaiian vocalist and percussionist",
+      "organizerContact": "organizer23@example.com",
       "owner": "admin@foo.com"
     },
     {
-      "location": "789 Rhythm Road, Beat City",
-      "time": "2023-12-27T18:00:00Z",
+      "location": "University of Hawaii, Manoa",
+      "time": "2023-12-30T20:00:00Z",
+      "musicalType": "Traditional Polynesian",
+      "desiredCapabilities": "Hip hop DJ and beat producer",
+      "organizerContact": "organizer24@example.com",
+      "owner": "john@foo.com"
+    },
+    {
+      "location": "Hanauma Bay, Honolulu",
+      "time": "2023-12-03T21:00:00Z",
+      "musicalType": "Rock",
+      "desiredCapabilities": "Keyboardist with reggae experience",
+      "organizerContact": "organizer25@example.com",
+      "owner": "admin@foo.com"
+    },
+    {
+      "location": "Chinatown, Honolulu",
+      "time": "2023-12-11T20:00:00Z",
       "musicalType": "Hip Hop",
-      "desiredCapabilities": "Keyboardist and backup vocalist",
-      "organizerContact": "rockfan@example.com",
+      "desiredCapabilities": "Bassist with Polynesian background",
+      "organizerContact": "organizer26@example.com",
       "owner": "john@foo.com"
     },
     {
-      "location": "456 Melody Lane, Harmony Town",
-      "time": "2023-12-30T15:00:00Z",
-      "musicalType": "Classical",
-      "desiredCapabilities": "Keyboardist and backup vocalist",
-      "organizerContact": "jazzlover@example.com",
+      "location": "Pearl Harbor, Honolulu",
+      "time": "2023-12-05T16:00:00Z",
+      "musicalType": "Hawaiian",
+      "desiredCapabilities": "Experienced ukulele player and slack-key guitarist",
+      "organizerContact": "organizer27@example.com",
       "owner": "admin@foo.com"
     },
     {
-      "location": "101 Chord Court, Symphony Ville",
-      "time": "2023-12-02T06:00:00Z",
+      "location": "Diamond Head Amphitheater, Honolulu",
+      "time": "2023-12-20T19:00:00Z",
+      "musicalType": "Slack-key Guitar",
+      "desiredCapabilities": "Hula dancers and Polynesian drummers",
+      "organizerContact": "organizer28@example.com",
+      "owner": "john@foo.com"
+    },
+    {
+      "location": "Ko Olina Beach, Oahu",
+      "time": "2023-12-22T14:00:00Z",
+      "musicalType": "Ukulele",
+      "desiredCapabilities": "Reggae vocalist and rhythm guitarist",
+      "organizerContact": "organizer29@example.com",
+      "owner": "admin@foo.com"
+    },
+    {
+      "location": "Waikiki Beach, Honolulu",
+      "time": "2023-12-10T14:00:00Z",
       "musicalType": "Jazz",
-      "desiredCapabilities": "Lead guitarist and vocalist",
-      "organizerContact": "jazzlover@example.com",
+      "desiredCapabilities": "Jazz saxophonist and drummer",
+      "organizerContact": "organizer30@example.com",
       "owner": "john@foo.com"
     },
     {
-      "location": "123 Main Street, Music City",
-      "time": "2023-12-15T11:00:00Z",
-      "musicalType": "Reggae",
-      "desiredCapabilities": "Experienced saxophonist, drummer, and bassist",
-      "organizerContact": "organizer@example.com",
-      "owner": "admin@foo.com"
-    },
-    {
-      "location": "202 Tempo Terrace, Melody Metropolis",
-      "time": "2023-12-06T18:00:00Z",
-      "musicalType": "Pop",
-      "desiredCapabilities": "Lead guitarist and vocalist",
-      "organizerContact": "classicalbuff@example.com",
-      "owner": "john@foo.com"
-    },
-    {
-      "location": "789 Rhythm Road, Beat City",
-      "time": "2023-12-24T16:00:00Z",
-      "musicalType": "Reggae",
-      "desiredCapabilities": "Composer and lyricist",
-      "organizerContact": "rockfan@example.com",
-      "owner": "admin@foo.com"
-    },
-    {
-      "location": "456 Melody Lane, Harmony Town",
-      "time": "2023-12-27T15:00:00Z",
-      "musicalType": "Pop",
-      "desiredCapabilities": "Composer and lyricist",
-      "organizerContact": "jazzlover@example.com",
-      "owner": "john@foo.com"
-    },
-    {
-      "location": "101 Chord Court, Symphony Ville",
-      "time": "2023-12-23T12:00:00Z",
-      "musicalType": "Reggae",
-      "desiredCapabilities": "Composer and lyricist",
-      "organizerContact": "jazzlover@example.com",
-      "owner": "admin@foo.com"
-    },
-    {
-      "location": "123 Main Street, Music City",
-      "time": "2023-12-27T23:00:00Z",
-      "musicalType": "Pop",
-      "desiredCapabilities": "Experienced violinist and cellist",
-      "organizerContact": "jazzlover@example.com",
-      "owner": "john@foo.com"
-    },
-    {
-      "location": "202 Tempo Terrace, Melody Metropolis",
-      "time": "2023-12-05T12:00:00Z",
-      "musicalType": "Pop",
-      "desiredCapabilities": "Experienced violinist and cellist",
-      "organizerContact": "rockfan@example.com",
-      "owner": "admin@foo.com"
-    },
-    {
-      "location": "789 Rhythm Road, Beat City",
-      "time": "2023-12-24T00:00:00Z",
-      "musicalType": "Pop",
-      "desiredCapabilities": "Keyboardist and backup vocalist",
-      "organizerContact": "jazzlover@example.com",
-      "owner": "john@foo.com"
-    },
-    {
-      "location": "456 Melody Lane, Harmony Town",
-      "time": "2023-12-19T03:00:00Z",
+      "location": "Ala Moana Center, Honolulu",
+      "time": "2023-12-12T14:00:00Z",
       "musicalType": "Blues",
-      "desiredCapabilities": "Experienced saxophonist, drummer, and bassist",
-      "organizerContact": "dj@example.com",
+      "desiredCapabilities": "Classical guitarist and vocalist",
+      "organizerContact": "organizer31@example.com",
       "owner": "admin@foo.com"
     },
     {
-      "location": "101 Chord Court, Symphony Ville",
-      "time": "2023-12-26T09:00:00Z",
+      "location": "Downtown Honolulu",
+      "time": "2023-12-09T05:00:00Z",
+      "musicalType": "Reggae",
+      "desiredCapabilities": "Traditional Hawaiian vocalist and percussionist",
+      "organizerContact": "organizer32@example.com",
+      "owner": "john@foo.com"
+    },
+    {
+      "location": "Kaka'ako Park, Honolulu",
+      "time": "2023-12-04T19:00:00Z",
+      "musicalType": "Traditional Polynesian",
+      "desiredCapabilities": "Hip hop DJ and beat producer",
+      "organizerContact": "organizer33@example.com",
+      "owner": "admin@foo.com"
+    },
+    {
+      "location": "University of Hawaii, Manoa",
+      "time": "2023-12-22T20:00:00Z",
+      "musicalType": "Rock",
+      "desiredCapabilities": "Keyboardist with reggae experience",
+      "organizerContact": "organizer34@example.com",
+      "owner": "john@foo.com"
+    },
+    {
+      "location": "Hanauma Bay, Honolulu",
+      "time": "2023-12-14T04:00:00Z",
       "musicalType": "Hip Hop",
-      "desiredCapabilities": "Drummer and percussionist",
-      "organizerContact": "jazzlover@example.com",
+      "desiredCapabilities": "Bassist with Polynesian background",
+      "organizerContact": "organizer35@example.com",
+      "owner": "admin@foo.com"
+    },
+    {
+      "location": "Chinatown, Honolulu",
+      "time": "2023-12-31T00:00:00Z",
+      "musicalType": "Hawaiian",
+      "desiredCapabilities": "Experienced ukulele player and slack-key guitarist",
+      "organizerContact": "organizer36@example.com",
       "owner": "john@foo.com"
     },
     {
-      "location": "123 Main Street, Music City",
-      "time": "2023-12-30T19:00:00Z",
+      "location": "Pearl Harbor, Honolulu",
+      "time": "2023-12-19T07:00:00Z",
+      "musicalType": "Slack-key Guitar",
+      "desiredCapabilities": "Hula dancers and Polynesian drummers",
+      "organizerContact": "organizer37@example.com",
+      "owner": "admin@foo.com"
+    },
+    {
+      "location": "Diamond Head Amphitheater, Honolulu",
+      "time": "2023-12-31T01:00:00Z",
+      "musicalType": "Ukulele",
+      "desiredCapabilities": "Reggae vocalist and rhythm guitarist",
+      "organizerContact": "organizer38@example.com",
+      "owner": "john@foo.com"
+    },
+    {
+      "location": "Ko Olina Beach, Oahu",
+      "time": "2023-12-26T17:00:00Z",
+      "musicalType": "Jazz",
+      "desiredCapabilities": "Jazz saxophonist and drummer",
+      "organizerContact": "organizer39@example.com",
+      "owner": "admin@foo.com"
+    },
+    {
+      "location": "Waikiki Beach, Honolulu",
+      "time": "2023-12-28T22:00:00Z",
       "musicalType": "Blues",
-      "desiredCapabilities": "Keyboardist and backup vocalist",
-      "organizerContact": "organizer@example.com",
+      "desiredCapabilities": "Classical guitarist and vocalist",
+      "organizerContact": "organizer40@example.com",
+      "owner": "john@foo.com"
+    },
+    {
+      "location": "Ala Moana Center, Honolulu",
+      "time": "2023-12-24T14:00:00Z",
+      "musicalType": "Reggae",
+      "desiredCapabilities": "Traditional Hawaiian vocalist and percussionist",
+      "organizerContact": "organizer41@example.com",
+      "owner": "admin@foo.com"
+    },
+    {
+      "location": "Downtown Honolulu",
+      "time": "2023-12-31T08:00:00Z",
+      "musicalType": "Traditional Polynesian",
+      "desiredCapabilities": "Hip hop DJ and beat producer",
+      "organizerContact": "organizer42@example.com",
+      "owner": "john@foo.com"
+    },
+    {
+      "location": "Kaka'ako Park, Honolulu",
+      "time": "2023-12-05T15:00:00Z",
+      "musicalType": "Rock",
+      "desiredCapabilities": "Keyboardist with reggae experience",
+      "organizerContact": "organizer43@example.com",
+      "owner": "admin@foo.com"
+    },
+    {
+      "location": "University of Hawaii, Manoa",
+      "time": "2023-12-19T17:00:00Z",
+      "musicalType": "Hip Hop",
+      "desiredCapabilities": "Bassist with Polynesian background",
+      "organizerContact": "organizer44@example.com",
+      "owner": "john@foo.com"
+    },
+    {
+      "location": "Hanauma Bay, Honolulu",
+      "time": "2023-12-10T21:00:00Z",
+      "musicalType": "Hawaiian",
+      "desiredCapabilities": "Experienced ukulele player and slack-key guitarist",
+      "organizerContact": "organizer45@example.com",
+      "owner": "admin@foo.com"
+    },
+    {
+      "location": "Chinatown, Honolulu",
+      "time": "2023-12-25T08:00:00Z",
+      "musicalType": "Slack-key Guitar",
+      "desiredCapabilities": "Hula dancers and Polynesian drummers",
+      "organizerContact": "organizer46@example.com",
+      "owner": "john@foo.com"
+    },
+    {
+      "location": "Pearl Harbor, Honolulu",
+      "time": "2023-12-15T09:00:00Z",
+      "musicalType": "Ukulele",
+      "desiredCapabilities": "Reggae vocalist and rhythm guitarist",
+      "organizerContact": "organizer47@example.com",
+      "owner": "admin@foo.com"
+    },
+    {
+      "location": "Diamond Head Amphitheater, Honolulu",
+      "time": "2023-12-09T20:00:00Z",
+      "musicalType": "Jazz",
+      "desiredCapabilities": "Jazz saxophonist and drummer",
+      "organizerContact": "organizer48@example.com",
+      "owner": "john@foo.com"
+    },
+    {
+      "location": "Ko Olina Beach, Oahu",
+      "time": "2023-12-12T23:00:00Z",
+      "musicalType": "Blues",
+      "desiredCapabilities": "Classical guitarist and vocalist",
+      "organizerContact": "organizer49@example.com",
       "owner": "admin@foo.com"
     }
   ]
