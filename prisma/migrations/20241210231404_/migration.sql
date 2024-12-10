@@ -9,9 +9,27 @@ CREATE TABLE "User" (
     "id" SERIAL NOT NULL,
     "email" TEXT NOT NULL,
     "password" TEXT NOT NULL,
+    "firstName" TEXT,
+    "lastName" TEXT,
+    "instruments" TEXT,
+    "bio" TEXT,
+    "genre" TEXT,
     "role" "Role" NOT NULL DEFAULT 'USER',
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Session" (
+    "id" SERIAL NOT NULL,
+    "location" TEXT NOT NULL,
+    "time" TIMESTAMP(3) NOT NULL,
+    "musicalType" TEXT NOT NULL,
+    "desiredCapabilities" TEXT NOT NULL,
+    "organizerContact" TEXT NOT NULL,
+    "owner" TEXT NOT NULL,
+
+    CONSTRAINT "Session_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
