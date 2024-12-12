@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
+import { Button, Col, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import swal from 'sweetalert';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -44,79 +44,99 @@ const EditAccount = ({ user }: { user: User }) => {
   };
 
   return (
-    <Container className="py-3">
-      <Row className="justify-content-center">
-        <Col xs={5}>
-          <Col className="text-center">
-            <h2>Edit Profile</h2>
-          </Col>
-          <Card>
-            <Card.Body>
-              <Form onSubmit={handleSubmit(onSubmit)}>
-                <Form.Group>
-                  <Form.Label>First Name</Form.Label>
-                  <input
-                    type="text"
-                    {...register('firstName')}
-                    className={`form-control ${errors.firstName ? 'is-invalid' : ''}`}
-                  />
-                  <div className="invalid-feedback">{errors.firstName?.message}</div>
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Last Name</Form.Label>
-                  <input
-                    type="text"
-                    {...register('lastName')}
-                    className={`form-control ${errors.lastName ? 'is-invalid' : ''}`}
-                  />
-                  <div className="invalid-feedback">{errors.lastName?.message}</div>
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Instruments</Form.Label>
-                  <input
-                    type="text"
-                    {...register('instruments')}
-                    className={`form-control ${errors.instruments ? 'is-invalid' : ''}`}
-                  />
-                  <div className="invalid-feedback">{errors.instruments?.message}</div>
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Bio</Form.Label>
-                  <textarea
-                    {...register('bio')}
-                    className={`form-control ${errors.bio ? 'is-invalid' : ''}`}
-                  />
-                  <div className="invalid-feedback">{errors.bio?.message}</div>
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Genre</Form.Label>
-                  <input
-                    type="text"
-                    {...register('genre')}
-                    className={`form-control ${errors.genre ? 'is-invalid' : ''}`}
-                  />
-                  <div className="invalid-feedback">{errors.genre?.message}</div>
-                </Form.Group>
-                <Form.Group className="form-group">
-                  <Row className="pt-3">
-                    <Col>
-                      <Button type="submit" variant="primary">
-                        Submit
-                      </Button>
-                    </Col>
-                    <Col>
-                      <Button type="button" onClick={() => reset()} variant="warning" className="float-right">
-                        Reset
-                      </Button>
-                    </Col>
-                  </Row>
-                </Form.Group>
-              </Form>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    <div
+      className="d-flex justify-content-center align-items-center text-white"
+      style={{ minHeight: '100vh' }}
+    >
+      <div
+        className="p-4"
+        style={{
+          backgroundColor: 'rgba(0, 0, 0, 0.7)',
+          borderRadius: '10px',
+          maxWidth: '500px',
+          width: '100%',
+        }}
+      >
+        <h1 className="text-center mb-4">Edit Your Profile</h1>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <Form.Group>
+            <Form.Label>First Name</Form.Label>
+            <input
+              type="text"
+              {...register('firstName')}
+              className={`form-control ${errors.firstName ? 'is-invalid' : ''}`}
+            />
+            <div className="invalid-feedback">{errors.firstName?.message}</div>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Last Name</Form.Label>
+            <input
+              type="text"
+              {...register('lastName')}
+              className={`form-control ${errors.lastName ? 'is-invalid' : ''}`}
+            />
+            <div className="invalid-feedback">{errors.lastName?.message}</div>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Instruments</Form.Label>
+            <input
+              type="text"
+              {...register('instruments')}
+              className={`form-control ${errors.instruments ? 'is-invalid' : ''}`}
+            />
+            <div className="invalid-feedback">{errors.instruments?.message}</div>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Bio</Form.Label>
+            <textarea
+              {...register('bio')}
+              className={`form-control ${errors.bio ? 'is-invalid' : ''}`}
+            />
+            <div className="invalid-feedback">{errors.bio?.message}</div>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Genre</Form.Label>
+            <input
+              type="text"
+              {...register('genre')}
+              className={`form-control ${errors.genre ? 'is-invalid' : ''}`}
+            />
+            <div className="invalid-feedback">{errors.genre?.message}</div>
+          </Form.Group>
+          <Row className="pt-3">
+            <Col>
+              <Button
+                type="submit"
+                style={{
+                  backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                  border: '1px solid white',
+                  color: 'white',
+                  width: '100%',
+                  padding: '15px',
+                }}
+              >
+                Submit
+              </Button>
+            </Col>
+            <Col>
+              <Button
+                type="button"
+                onClick={() => reset()}
+                style={{
+                  backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                  border: '1px solid white',
+                  color: 'white',
+                  width: '100%',
+                  padding: '15px',
+                }}
+              >
+                Reset
+              </Button>
+            </Col>
+          </Row>
+        </Form>
+      </div>
+    </div>
   );
 };
 
