@@ -5,9 +5,8 @@ import { useSession } from 'next-auth/react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import swal from 'sweetalert';
-import { Card, Col, Container, Button, Form, Row } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import { changePassword } from '@/lib/dbActions';
-import './ChangePassword.css'; // Custom CSS for styling
 
 type ChangePasswordForm = {
   oldpassword: string;
@@ -18,6 +17,7 @@ type ChangePasswordForm = {
 const ChangePassword = () => {
   const { data: session } = useSession();
   const email = session?.user?.email || '';
+
   const validationSchema = Yup.object().shape({
     oldpassword: Yup.string().required('Old Password is required'),
     password: Yup.string()
@@ -45,67 +45,81 @@ const ChangePassword = () => {
   };
 
   return (
-    <main className="change-password-container">
-      <Container>
-        <Row className="justify-content-center">
-          <Col md={6} lg={5}>
-            <Card className="p-4 shadow-sm border-0">
-              <Card.Body>
-                <h2 className="text-center mb-4 text-dark">Change Password</h2>
-                <Form onSubmit={handleSubmit(onSubmit)}>
-                  <Form.Group className="mb-3">
-                    <Form.Label>Old Password</Form.Label>
-                    <Form.Control
-                      type="password"
-                      {...register('oldpassword')}
-                      className={errors.oldpassword ? 'is-invalid' : ''}
-                      placeholder="Enter old password"
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.oldpassword?.message}
-                    </Form.Control.Feedback>
-                  </Form.Group>
+    <main
+      className="d-flex justify-content-center align-items-center text-white"
+      style={{ minHeight: '100vh' }}
+    >
+      <div
+        className="p-4"
+        style={{
+          backgroundColor: 'rgba(0, 0, 0, 0.7)',
+          borderRadius: '10px',
+          maxWidth: '500px',
+          width: '100%',
+        }}
+      >
+        <h1 className="text-center mb-4">Change Password</h1>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <Form.Group className="mb-3">
+            <Form.Label>Old Password</Form.Label>
+            <input
+              type="password"
+              {...register('oldpassword')}
+              className={`form-control ${errors.oldpassword ? 'is-invalid' : ''}`}
+              placeholder="Enter old password"
+            />
+            <div className="invalid-feedback">{errors.oldpassword?.message}</div>
+          </Form.Group>
 
-                  <Form.Group className="mb-3">
-                    <Form.Label>New Password</Form.Label>
-                    <Form.Control
-                      type="password"
-                      {...register('password')}
-                      className={errors.password ? 'is-invalid' : ''}
-                      placeholder="Enter new password"
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.password?.message}
-                    </Form.Control.Feedback>
-                  </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>New Password</Form.Label>
+            <input
+              type="password"
+              {...register('password')}
+              className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+              placeholder="Enter new password"
+            />
+            <div className="invalid-feedback">{errors.password?.message}</div>
+          </Form.Group>
 
-                  <Form.Group className="mb-4">
-                    <Form.Label>Confirm Password</Form.Label>
-                    <Form.Control
-                      type="password"
-                      {...register('confirmPassword')}
-                      className={errors.confirmPassword ? 'is-invalid' : ''}
-                      placeholder="Confirm new password"
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {errors.confirmPassword?.message}
-                    </Form.Control.Feedback>
-                  </Form.Group>
+          <Form.Group className="mb-4">
+            <Form.Label>Confirm Password</Form.Label>
+            <input
+              type="password"
+              {...register('confirmPassword')}
+              className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`}
+              placeholder="Confirm new password"
+            />
+            <div className="invalid-feedback">{errors.confirmPassword?.message}</div>
+          </Form.Group>
 
-                  <div className="d-flex justify-content-between">
-                    <Button type="submit" className="btn-black px-4">
-                      Change
-                    </Button>
-                    <Button type="button" onClick={() => reset()} className="btn-gray px-4">
-                      Reset
-                    </Button>
-                  </div>
-                </Form>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+          <div className="d-flex justify-content-between mt-4">
+            <Button
+              type="submit"
+              style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                border: '1px solid white',
+                color: 'white',
+                width: '48%',
+              }}
+            >
+              Change
+            </Button>
+            <Button
+              type="button"
+              onClick={() => reset()}
+              style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                border: '1px solid white',
+                color: 'white',
+                width: '48%',
+              }}
+            >
+              Reset
+            </Button>
+          </div>
+        </Form>
+      </div>
     </main>
   );
 };
