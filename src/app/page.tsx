@@ -1,53 +1,7 @@
 /* eslint-disable @typescript-eslint/no-shadow */
-import { PrismaClient } from '@prisma/client';
 import { Col, Container, Row, Button } from 'react-bootstrap';
+import { getFeaturedSession } from '@/lib/featuredSession';
 import FeaturedSessionCard from '../components/FeaturedSessionCard';
-
-const prisma = new PrismaClient();
-
-interface SessionType {
-  id: number;
-  location: string;
-  time: Date; // Use Date because Prisma returns `Date` objects for date/time fields
-  musicalType: string;
-  desiredCapabilities: string;
-  organizerContact: string;
-  owner: string;
-}
-
-export const getFeaturedSession = async (): Promise<Omit<SessionType, 'time'> & { time: string } | null> => {
-  const sessions = await prisma.session.findMany({
-    select: {
-      id: true,
-      location: true,
-      time: true,
-      musicalType: true,
-      desiredCapabilities: true,
-      organizerContact: true,
-      owner: true,
-    },
-  });
-
-  const now = new Date();
-
-  const closestSession = sessions.reduce<SessionType | null>((closest, session) => {
-    const sessionDate = new Date(session.time);
-    const closestDate = closest ? new Date(closest.time) : null;
-
-    return sessionDate > now && (!closestDate || sessionDate < closestDate)
-      ? session
-      : closest;
-  }, null);
-
-  if (closestSession) {
-    return {
-      ...closestSession,
-      time: closestSession.time.toISOString(),
-    };
-  }
-
-  return null;
-};
 
 const LandingPage = async () => {
   const featuredSession = await getFeaturedSession();
@@ -88,7 +42,7 @@ const LandingPage = async () => {
                     width: '48%', // Adjust for left-right alignment
                     height: '60px', // Set a consistent height
                   }}
-                  href="/auth/signin" // Redirects to login
+                  href="/auth/signin"
                 >
                   Log Into an Existing Account
                 </Button>
@@ -100,12 +54,8 @@ const LandingPage = async () => {
                     margin: '10px',
                     width: '48%', // Adjust for left-right alignment
                     height: '60px', // Set a consistent height
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center', // Vertically align text
-                    textAlign: 'center',
                   }}
-                  href="/auth/signup" // Redirects to sign up
+                  href="/auth/signup"
                 >
                   Create a New Account
                 </Button>

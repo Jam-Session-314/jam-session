@@ -1,74 +1,8 @@
 /* eslint-disable @typescript-eslint/no-shadow */
-import { PrismaClient } from '@prisma/client';
-import { getServerSession } from 'next-auth';
 import { Col, Container, Row, Button } from 'react-bootstrap';
-import authOptions from '@/lib/authOptions';
+import { getFeaturedSession } from '@/lib/featuredSession';
+import { getUserFullName } from '@/lib/getUserFullName';
 import FeaturedSessionCard from '../../components/FeaturedSessionCard';
-
-const prisma = new PrismaClient();
-
-interface SessionType {
-  id: number;
-  location: string;
-  time: Date; // Use Date because Prisma returns `Date` objects for date/time fields
-  musicalType: string;
-  desiredCapabilities: string;
-  organizerContact: string;
-  owner: string;
-}
-
-export const getFeaturedSession = async (): Promise<Omit<SessionType, 'time'> & { time: string } | null> => {
-  const sessions = await prisma.session.findMany({
-    select: {
-      id: true,
-      location: true,
-      time: true,
-      musicalType: true,
-      desiredCapabilities: true,
-      organizerContact: true,
-      owner: true,
-    },
-  });
-
-  const now = new Date();
-
-  const closestSession = sessions.reduce<SessionType | null>((closest, session) => {
-    const sessionDate = new Date(session.time);
-    const closestDate = closest ? new Date(closest.time) : null;
-
-    return sessionDate > now && (!closestDate || sessionDate < closestDate)
-      ? session
-      : closest;
-  }, null);
-
-  if (closestSession) {
-    return {
-      ...closestSession,
-      time: closestSession.time.toISOString(),
-    };
-  }
-
-  return null;
-};
-
-export const getUserFullName = async () => {
-  const session = await getServerSession(authOptions);
-
-  if (!session?.user?.email) {
-    return { firstName: 'Guest', lastName: '' };
-  }
-
-  const user = await prisma.user.findUnique({
-    where: { email: session.user.email },
-    select: { firstName: true, lastName: true },
-  });
-
-  if (!user) {
-    return { firstName: 'Guest', lastName: '' };
-  }
-
-  return { firstName: user.firstName || 'Guest', lastName: user.lastName || '' };
-};
 
 const Home = async () => {
   const featuredSession = await getFeaturedSession();
