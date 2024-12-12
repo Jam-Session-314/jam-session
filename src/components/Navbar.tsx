@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/jsx-indent, @typescript-eslint/indent */
 
 'use client';
@@ -16,43 +17,25 @@ const NavBar: React.FC = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href={currentUser ? '/sessions' : '/'}>JAM SESSION</Navbar.Brand>
+        <Navbar.Brand href={currentUser ? '/home' : '/'}>JAM SESSION</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-start">
-            {currentUser
-              ? [
-                  <Nav.Link id="sessions-nav" href="/sessions" key="sessions" active={pathName === '/sessions'}>
-                    View Sessions
-                  </Nav.Link>,
-                  <Nav.Link
-                    id="sessions-nav"
-                    href="/add-session"
-                    key="add-session"
-                    active={pathName === '/add-session'}
-                  >
-                    Add Session
-                  </Nav.Link>,
-                  <Nav.Link
-                    id="sessions-nav"
-                    href="/my-sessions"
-                    key="my-sessions"
-                    active={pathName === '/my-sessions'}
-                  >
-                    My Sessions
-                  </Nav.Link>,
-
-                  <Nav.Link id="sessions-nav" href="/sessions" key="sessions" active={pathName === '/sessions'}>
-                    View Sessions
-                  </Nav.Link>,
-
-                  <Nav.Link id="sessions-nav" href="/sessions" key="sessions" active={pathName === '/sessions'}>
-                    Discover
-                  </Nav.Link>,
-                ]
-              : ''}
+            {currentUser && (
+              [
+                <Nav.Link id="view-sessions-nav" href="/sessions" key="view-sessions" active={pathName === '/sessions'}>
+                  View Sessions
+                </Nav.Link>,
+                <Nav.Link id="my-sessions-nav" href="/my-sessions" key="my-sessions" active={pathName === '/my-sessions'}>
+                  My Sessions
+                </Nav.Link>,
+                <Nav.Link id="add-session-nav" href="/add-session" key="add-session" active={pathName === '/add-session'}>
+                  Add Session
+                </Nav.Link>,
+              ]
+            )}
             {currentUser && role === 'ADMIN' ? (
-              <Nav.Link id="admin-stuff-nav" href="/admin" key="admin" active={pathName === '/admin'}>
+              <Nav.Link id="admin-nav" href="/admin" key="admin" active={pathName === '/admin'}>
                 Admin
               </Nav.Link>
             ) : (
@@ -62,26 +45,26 @@ const NavBar: React.FC = () => {
           <Nav>
             {session ? (
               <NavDropdown id="login-dropdown" title={currentUser}>
-                <NavDropdown.Item id="login-dropdown-profile" href="/profile">
+                <NavDropdown.Item id="profile-dropdown" href="/profile">
                   <PersonCircle />
                   Profile
                 </NavDropdown.Item>
-                <NavDropdown.Item id="login-dropdown-sign-out" href="/api/auth/signout">
+                <NavDropdown.Item id="signout-dropdown" href="/api/auth/signout">
                   <BoxArrowRight />
                   Sign Out
                 </NavDropdown.Item>
-                <NavDropdown.Item id="login-dropdown-change-password" href="/auth/change-password">
+                <NavDropdown.Item id="change-password-dropdown" href="/auth/change-password">
                   <Lock />
                   Change Password
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
               <NavDropdown id="login-dropdown" title="Login">
-                <NavDropdown.Item id="login-dropdown-sign-in" href="/auth/signin">
+                <NavDropdown.Item id="signin-dropdown" href="/auth/signin">
                   <PersonFill />
                   Sign in
                 </NavDropdown.Item>
-                <NavDropdown.Item id="login-dropdown-sign-up" href="/auth/signup">
+                <NavDropdown.Item id="signup-dropdown" href="/auth/signup">
                   <PersonPlusFill />
                   Sign up
                 </NavDropdown.Item>

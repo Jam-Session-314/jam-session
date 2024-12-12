@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 import { PrismaClient } from '@prisma/client';
+import { getServerSession } from 'next-auth';
 import { Col, Container, Row, Button } from 'react-bootstrap';
-import FeaturedSessionCard from '../components/FeaturedSessionCard';
+import authOptions from '@/lib/authOptions';
+import FeaturedSessionCard from '../../components/FeaturedSessionCard';
 
 const prisma = new PrismaClient();
 
@@ -49,8 +51,28 @@ export const getFeaturedSession = async (): Promise<Omit<SessionType, 'time'> & 
   return null;
 };
 
-const LandingPage = async () => {
+export const getUserFullName = async () => {
+  const session = await getServerSession(authOptions);
+
+  if (!session?.user?.email) {
+    return { firstName: 'Guest', lastName: '' };
+  }
+
+  const user = await prisma.user.findUnique({
+    where: { email: session.user.email },
+    select: { firstName: true, lastName: true },
+  });
+
+  if (!user) {
+    return { firstName: 'Guest', lastName: '' };
+  }
+
+  return { firstName: user.firstName || 'Guest', lastName: user.lastName || '' };
+};
+
+const Home = async () => {
   const featuredSession = await getFeaturedSession();
+  const userName = await getUserFullName();
 
   return (
     <main>
@@ -76,21 +98,28 @@ const LandingPage = async () => {
                 borderRadius: '10px',
               }}
             >
-              <h1 className="mb-4">HELLO THERE!</h1>
+              <h1 className="mb-4">
+                Aloha
+                {' '}
+                {userName.firstName}
+                {' '}
+                {userName.lastName}
+                !
+              </h1>
               <p>Welcome to Jam Session!</p>
-              <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex flex-wrap justify-content-between">
                 <Button
                   style={{
                     backgroundColor: 'rgba(0, 0, 0, 0.7)',
                     border: '1px solid white',
                     color: 'white',
                     margin: '10px',
-                    width: '48%', // Adjust for left-right alignment
-                    height: '60px', // Set a consistent height
+                    flex: '1 1 45%',
+                    padding: '15px',
                   }}
-                  href="/auth/signin" // Redirects to login
+                  href="/sessions"
                 >
-                  Log Into an Existing Account
+                  View Sessions
                 </Button>
                 <Button
                   style={{
@@ -98,16 +127,38 @@ const LandingPage = async () => {
                     border: '1px solid white',
                     color: 'white',
                     margin: '10px',
-                    width: '48%', // Adjust for left-right alignment
-                    height: '60px', // Set a consistent height
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center', // Vertically align text
-                    textAlign: 'center',
+                    flex: '1 1 45%',
+                    padding: '15px',
                   }}
-                  href="/auth/signup" // Redirects to sign up
+                  href="/my-sessions"
                 >
-                  Create a New Account
+                  My Sessions
+                </Button>
+                <Button
+                  style={{
+                    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                    border: '1px solid white',
+                    color: 'white',
+                    margin: '10px',
+                    flex: '1 1 45%',
+                    padding: '15px',
+                  }}
+                  href="/add-session"
+                >
+                  Add Session
+                </Button>
+                <Button
+                  style={{
+                    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                    border: '1px solid white',
+                    color: 'white',
+                    margin: '10px',
+                    flex: '1 1 45%',
+                    padding: '15px',
+                  }}
+                  href="/profile"
+                >
+                  My Profile
                 </Button>
               </div>
             </Col>
@@ -153,4 +204,4 @@ const LandingPage = async () => {
   );
 };
 
-export default LandingPage;
+export default Home;
