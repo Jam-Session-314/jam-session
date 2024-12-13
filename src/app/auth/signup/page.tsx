@@ -4,14 +4,13 @@ import { signIn } from 'next-auth/react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import { Card, Col, Container, Button, Form, Row } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import { createUser } from '@/lib/dbActions';
 
 type SignUpForm = {
   email: string;
   password: string;
   confirmPassword: string;
-  // acceptTerms: boolean;
 };
 
 /** The sign up page. */
@@ -37,73 +36,98 @@ const SignUp = () => {
   });
 
   const onSubmit = async (data: SignUpForm) => {
-    // console.log(JSON.stringify(data, null, 2));
     await createUser(data);
-    // After creating, signIn with redirect to the add page
     await signIn('credentials', { callbackUrl: '/home', ...data });
   };
 
   return (
-    <main>
-      <Container>
-        <Row className="justify-content-center">
-          <Col xs={5}>
-            <h1 className="text-center">Sign Up</h1>
-            <Card>
-              <Card.Body>
-                <Form onSubmit={handleSubmit(onSubmit)}>
-                  <Form.Group className="form-group">
-                    <Form.Label>Email</Form.Label>
-                    <input
-                      type="text"
-                      {...register('email')}
-                      className={`form-control ${errors.email ? 'is-invalid' : ''}`}
-                    />
-                    <div className="invalid-feedback">{errors.email?.message}</div>
-                  </Form.Group>
+    <main
+      className="d-flex justify-content-center align-items-center text-white"
+      style={{ minHeight: '100vh' }}
+    >
+      <div
+        className="p-4"
+        style={{
+          backgroundColor: 'rgba(0, 0, 0, 0.7)',
+          borderRadius: '10px',
+          maxWidth: '500px',
+          width: '100%',
+        }}
+      >
+        <h1 className="text-center mb-4">Sign Up</h1>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <Form.Group className="mb-3">
+            <Form.Label>Email</Form.Label>
+            <input
+              type="text"
+              {...register('email')}
+              className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+              placeholder="Enter your email"
+            />
+            <div className="invalid-feedback">{errors.email?.message}</div>
+          </Form.Group>
 
-                  <Form.Group className="form-group">
-                    <Form.Label>Password</Form.Label>
-                    <input
-                      type="password"
-                      {...register('password')}
-                      className={`form-control ${errors.password ? 'is-invalid' : ''}`}
-                    />
-                    <div className="invalid-feedback">{errors.password?.message}</div>
-                  </Form.Group>
-                  <Form.Group className="form-group">
-                    <Form.Label>Confirm Password</Form.Label>
-                    <input
-                      type="password"
-                      {...register('confirmPassword')}
-                      className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`}
-                    />
-                    <div className="invalid-feedback">{errors.confirmPassword?.message}</div>
-                  </Form.Group>
-                  <Form.Group className="form-group py-3">
-                    <Row>
-                      <Col>
-                        <Button type="submit" className="btn btn-primary">
-                          Register
-                        </Button>
-                      </Col>
-                      <Col>
-                        <Button type="button" onClick={() => reset()} className="btn btn-warning float-right">
-                          Reset
-                        </Button>
-                      </Col>
-                    </Row>
-                  </Form.Group>
-                </Form>
-              </Card.Body>
-              <Card.Footer>
-                Already have an account?
-                <a href="/auth/signin">Sign in</a>
-              </Card.Footer>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+          <Form.Group className="mb-3">
+            <Form.Label>Password</Form.Label>
+            <input
+              type="password"
+              {...register('password')}
+              className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+              placeholder="Enter your password"
+            />
+            <div className="invalid-feedback">{errors.password?.message}</div>
+          </Form.Group>
+
+          <Form.Group className="mb-4">
+            <Form.Label>Confirm Password</Form.Label>
+            <input
+              type="password"
+              {...register('confirmPassword')}
+              className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`}
+              placeholder="Confirm your password"
+            />
+            <div className="invalid-feedback">{errors.confirmPassword?.message}</div>
+          </Form.Group>
+
+          <div className="d-flex justify-content-between mt-4">
+            <Button
+              type="submit"
+              style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                border: '1px solid white',
+                color: 'white',
+                width: '48%',
+              }}
+            >
+              Register
+            </Button>
+            <Button
+              type="button"
+              onClick={() => reset()}
+              style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                border: '1px solid white',
+                color: 'white',
+                width: '48%',
+              }}
+            >
+              Reset
+            </Button>
+          </div>
+        </Form>
+        <div className="mt-4 text-center">
+          <p>
+            Already have an account?
+            {' '}
+            <a
+              href="/auth/signin"
+              style={{ color: '#fff', textDecoration: 'underline' }}
+            >
+              Sign in
+            </a>
+          </p>
+        </div>
+      </div>
     </main>
   );
 };
